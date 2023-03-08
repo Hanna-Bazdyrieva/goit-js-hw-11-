@@ -63,7 +63,7 @@ function loadMore() {
         loadMoreBtn.classList.add('is-hidden');
       }
       gallery.insertAdjacentHTML('beforeend', createGalleryCards(data.hits));
-      const gallerySimpleLightbox = new SimpleLightbox('.gallery a');
+      // const gallerySimpleLightbox = new SimpleLightbox('.gallery a');
     })
     .catch(error => {
       console.log(error);
