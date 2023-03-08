@@ -1,17 +1,17 @@
 {{#each this}}
-  <a class='gallery-item__link' href='{{largeImageURL}}'>
+  <a class='gallery-item__link' href='{{this.largeImageURL}}'>
     <div class='gallery-item'>
       <div>
         <img
           class='gallery-item__img'
-          src='{{webformatURL}}'
-          alt='{{tags}}'
+          src='{{this.webformatURL}}'
+          alt='{{this.tags}}'
           loading='lazy'
         />
       </div>
-      {{!-- <div class='gallery-item__info'>
+      <div class='gallery-item__info'>
         <p class='info-item'>
-          <b>Likes</b><span>{{this.likes}}</span>
+          <b>Likes: </b><span>{{this.likes}}</span>
         </p>
         <p class='info-item'>
           <b>Views: </b><span>{{this.views}}</span>
@@ -22,6 +22,6 @@
         <p class='info-item'>
           <b>Downloads: </b><span>{{this.downloads}}</span>
         </p>
-      </div> --}}
+      </div>
     </div></a>
 {{/each}}

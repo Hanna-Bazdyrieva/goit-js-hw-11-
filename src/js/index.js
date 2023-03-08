@@ -3,8 +3,8 @@ import getRefs from './getRefs';
 import { PixabayAPI } from './api/PixabayAPI';
 import createGalleryCards from '../templates/gallery-card.hbs';
 // import SimpleLightbox from '../../node_modules/simplelightbox/dist/simple-lightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
-// import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
 
 const { form, gallery, loadMoreBtn } = getRefs();
 const pixabayAPI = new PixabayAPI();
@@ -38,7 +38,7 @@ function searchOnSubmit(e) {
       }
 
       gallery.innerHTML = createGalleryCards(data.hits);
-      // const gallerySimpleLightbox = new SimpleLightbox('.gallery a');
+      const gallerySimpleLightbox = new SimpleLightbox('.gallery a');
 
       loadMoreBtn.classList.remove('is-hidden');
     })
