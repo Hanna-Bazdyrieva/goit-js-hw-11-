@@ -3,9 +3,11 @@ import { Notify } from 'notiflix';
 const options = {
   fontSize: '20px',
   width: '550px',
-  position: 'center-center',
+  position: 'right-top',
+  clickToClose: true,
+  pauseOnHover: false,
   backOverlay: true,
-  timeout: 1200,
+  timeout: 1000,
 };
 
 function notifySuccess(number) {

@@ -30,6 +30,7 @@ async function searchOnSubmit(e) {
 
   const searchQuery = e.currentTarget.elements[0].value.trim();
   pixabayAPI.query = searchQuery;
+  pixabayAPI.page = 1;
 
   try {
     if (!searchQuery) {
