@@ -32,6 +32,7 @@ button {
   font-weight: 500;
   padding: 10px 20px;
   margin-left: 20px;
+  margin-top: 10px;
   border-radius: 20px;
   background-color: rgb(179, 245, 195);
   box-shadow: 0px 0px 4px 3px rgba(49, 64, 53, 0.5);
@@ -55,7 +56,7 @@ input {
   font: inherit;
   font-size: 24px;
   padding: 10px;
-  width: 400px;
+  max-width: 400px;
   /* margin: 50px auto 20px 50px; */
   border-radius: 20px;
   background-color: rgb(249, 247, 240);
@@ -77,9 +78,11 @@ input {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0 20px;
-  gap: 40px;
+  gap: 30px;
   margin: 0 auto 20px auto;
+  width: 100%;
 }
 
 .gallery-item {
@@ -87,7 +90,6 @@ input {
   flex-direction: column;
   justify-content: space-between;
 
-  /* width: calc((100% - 60px) / 4); */
   height: 100%;
   /* border-radius: 20px; */
   background-color: rgb(235, 249, 238);
@@ -107,7 +109,8 @@ input {
 }
 .gallery-item__link {
   display: block;
-  width: calc((100% - 120px) / 4);
+  /* width: calc((100% - 120px) / 4); */
+  flex-basis: calc((100% - 60px) / 3);
   color: inherit;
   height: auto;
 
@@ -135,4 +138,26 @@ input {
 
 .is-hidden {
   display: none;
+}
+@media screen and (max-width: 600px) {
+  button {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+  input {
+    font-size: 20px;
+    max-width: 250px;
+  }
+  .search-form {
+    padding: 15px 10px;
+  }
+
+  .gallery-item__info {
+    display: none;
+  }
+  .gallery {
+    padding: 0 10px;
+    gap: 10px;
+    margin: 0 auto 10px auto;
+  }
 }
